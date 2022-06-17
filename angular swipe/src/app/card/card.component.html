@@ -1,0 +1,104 @@
+    <div class="outerdiv">
+      <div style="padding:15px 0px 0px 25px;height:300px;background-color: #00FFFF;"><i class="fa fa-arrow-left"></i>  Daily Recomandation</div>
+      <div class="tphoto innerdiv"
+      [@cardAnimator]="animationState"
+      (@cardAnimator.done)="resetAnimationState($event)"
+      (swipeleft)='startAnimation("swipeleft")' 
+      (swiperight)='startAnimation("swiperight")'>
+    <div class="row" >
+      <div class="col-lg-12">
+        <img [src]="users[index].picture" width='300' height='250' title="tphoto"  />
+      </div>
+      <br>
+      <div class="col-lg-12" style="padding: 9px 20px 3px 25px"><i class="fa fa-shield"></i> Varified</div>
+      <div class="col-lg-12" style="padding:0px 20px 0px 25px; line-height: 22px;">
+        <div class="name">{{users[index].name}}</div>
+        <span class="">{{users[index].age}}</span>,<span>{{users[index].proff}}</span>
+        <hr>
+      </div>
+      
+      <div class="col-lg-12" style="padding-left: 25px;">
+       <div class="col-lg-4 pad3">
+        <div> <i class="fa fa-star"></i> Shortlist</div>
+       </div>
+       <div class="col-lg-4 pad3"><div>Like Her?</div></div>
+       
+       <div class="col-lg-4 pad3">
+        <span class="round1"><i class="fa fa-xmark" data-toggle="modal" data-target="#exampleModal"></i></span>
+        <span class="round2 correct"><i class="fa fa-check" data-toggle="modal" data-target="#exampleModal"></i></span>
+       </div>
+      </div>
+    </div>
+      
+     
+    </div>
+
+    </div>
+    
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="height: 160px;">
+            <div>
+            <div style="display: flex;">
+          <div style="width: 30%;">
+           <span> <img src="./../../assets/images/pic1.jpg" width="50" height="50" class="imgcircle"></span>
+          </div>
+          <div style="position: relative;top:4px">
+             <div>Katrina Potter</div>
+             <div>26 Yers, 5"0, India</div>
+          </div>
+          </div>
+          <div>
+          <div class="col-lg-12" style="padding-top: 10px;">
+           Ypur intrest is on its way. Increase your chancs of a positive response by showing your photo<br>
+         </div>
+        </div>
+      </div>
+          </div>
+          <div class="modal-footer" style="display: flex;">
+            <div class="round3">close</div>&nbsp;
+            <div class="round3" style="margin-left: 45px;">show photos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="col-lg-12" style="position: relative;
+        top: 25px;">
+          <div class="col-lg-4">
+           <span> <img src="./../../assets/images/pic1.jpg" width="50" height="50" class="imgcircle"></span>
+          </div>
+          <div class="col-lg-8">
+             <div>Katrina Potter</div>
+             <div>26 Yers, 5"0, India</div>
+          </div>
+          
+          <div class="col-lg-12" style="padding-top: 10px;">
+           Ypur intrest is on its way. Increase your chancs of a positive response by showing your photo<br>
+         </div>
+        </div>
+        <div class="modal-content">
+          
+          <div class="modal-body">
+          
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    
